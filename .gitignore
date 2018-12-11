@@ -1,0 +1,24 @@
+# IDEs
+*.sublime-workspace
+.vscode/
+.idea/
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Code / build
+coverage
+npm-debug.log*
+node_modules
+.tmp
+
+# Runtime data
+pids
+*.pid
+*.seed

@@ -1,0 +1,30 @@
+# IDEs
+*.sublime-workspace
+.vscode/
+.idea/
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Code / build
+Dockerfile
+docker-compose.yml
+docker-scripts
+README.md
+screenshots
+coverage
+npm-debug.log*
+node_modules
+.tmp
+.editor*
+.nvmrc
+.docker*
+.babel*
+.eslint*
+.prettier*
