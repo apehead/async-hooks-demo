@@ -35,7 +35,9 @@ class MyDBQuery extends AsyncResource {
   }
 
   getInfo(query, callback) {
-    console.log('executing getInfo()');
+    console.log('⚓ executing getInfo()');
+    // this.db.get(query, callback(null, {}));
+
     this.db.get(query, (err, data) => {
       this.runInAsyncScope(
         // function to call in the execution context of this async resource
@@ -50,7 +52,7 @@ class MyDBQuery extends AsyncResource {
   }
 
   close() {
-    console.log('executing close()');
+    console.log('⚓ executing close()');
     this.db = null;
     this.emitDestroy();
   }
@@ -69,16 +71,16 @@ const fakeDBImpl = {
 const dbConnector = new MyDBQuery(fakeDBImpl);
 
 setTimeout(() => {
-  console.log('fetching my query...');
+  console.log('⚓ fetching my query...');
 
   dbConnector.getInfo('my query', () => {
-    console.log('my query callback', {
+    console.log('⚓ my query callback', {
       triggerAsyncId: triggerAsyncId(),
       executionAsyncId: executionAsyncId()
     });
 
     setTimeout(() => {
-      console.log('closing dbConnector, executionAsyncId: ', {
+      console.log('⚓ closing dbConnector, executionAsyncId: ', {
         triggerAsyncId: triggerAsyncId(),
         executionAsyncId: executionAsyncId()
       });
